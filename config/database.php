@@ -1,14 +1,15 @@
 <?php
 // Database configuration
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'book_store_1');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+// Database configuration for InfinityFree
 
-// Create database connection
+define('DB_HOST', 'sql100.infinityfree.com');
+define('DB_NAME', 'if0_40694250_book_store_1');
+define('DB_USER', 'if0_40694250');
+define('DB_PASS', 'tfjeocw0xnz');
+
 try {
     $pdo = new PDO(
-        "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8mb4",
+        "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
         DB_USER,
         DB_PASS,
         [
@@ -18,7 +19,8 @@ try {
         ]
     );
 } catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
+    echo "<h3>Database connection error</h3>";
+    exit;
 }
 ?>
 
