@@ -38,18 +38,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Validation
     if (empty($name)) {
-        $error = "Tên danh mục là bắt buộc.";
+        $error = "Tên thể loại là bắt buộc.";
     } else {
         try {
             $stmt = $pdo->prepare("UPDATE categories SET name = ?, description = ? WHERE id = ?");
             $stmt->execute([$name, $description, $id]);
-            $message = "Cập nhật danh mục thành công!";
+            $message = "Cập nhật thể loại thành công!";
             // Refresh category data
             $stmt = $pdo->prepare("SELECT * FROM categories WHERE id = ?");
             $stmt->execute([$id]);
             $category = $stmt->fetch(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
-            $error = "Lỗi khi cập nhật danh mục: " . $e->getMessage();
+            $error = "Lỗi khi cập nhật thể loại: " . $e->getMessage();
         }
     }
 }
@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary">Cập Nhật</button>
-                    <a href="categories.php" class="btn btn-secondary">Hủy</a>
+                    <a href="categories.php" class="btn btn-secondary">Cancel</a>
                 </div>
             </form>
         </section>
