@@ -6,9 +6,6 @@
 -- Then drop your table, then run:
 -- SET FOREIGN_KEY_CHECKS = 1;
 
-CREATE DATABASE IF NOT EXISTS book_store_1;
-USE book_store_1;
-
 -- ============================================
 -- STEP 1: Drop all existing tables safely
 -- ============================================
