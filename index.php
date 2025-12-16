@@ -72,7 +72,7 @@ try {
     <?php endif; ?>
 
     <section class="hero">
-        <h2>Chào Mừng Đến Cửa Hàng Sách</h2>
+        <h2>Chào Mừng Đến Nhan's BookStore!</h2>
         <p>Khám phá cuốn sách yêu thích tiếp theo của bạn</p>
     </section>
 
