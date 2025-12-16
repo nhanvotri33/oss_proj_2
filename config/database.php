@@ -7,6 +7,7 @@ define('DB_NAME', 'if0_40694250_book_store_1');
 define('DB_USER', 'if0_40694250');
 define('DB_PASS', 'tfjeocw0xnz');
 
+
 try {
     $pdo = new PDO(
         "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8mb4",
