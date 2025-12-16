@@ -2,29 +2,45 @@
 // Database configuration
 // Database configuration for InfinityFree
 
-define('DB_HOST', 'sql100.infinityfree.com');
-define('DB_NAME', 'if0_40694250_book_store_1');
-define('DB_USER', 'if0_40694250');
-define('DB_PASS', 'tfjeocw0xnz');
+// define('DB_HOST', 'sql100.infinityfree.com');
+// define('DB_NAME', 'if0_40694250_book_store_1');
+// define('DB_USER', 'if0_40694250');
+// define('DB_PASS', 'tfjeocw0xnz');
 
 
-try {
-    $pdo = new PDO(
-        "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8mb4",
-        DB_USER,
-        DB_PASS,
-        [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-            PDO::ATTR_EMULATE_PREPARES => false
-        ]
-    );
-} catch (PDOException $e) {
-    echo "<pre>";
-    echo "PDO ERROR:\n";
-    echo $e->getMessage();
-    echo "</pre>";
+// try {
+//     $pdo = new PDO(
+//         "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8mb4",
+//         DB_USER,
+//         DB_PASS,
+//         [
+//             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+//             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+//             PDO::ATTR_EMULATE_PREPARES => false
+//         ]
+//     );
+// } catch (PDOException $e) {
+//     echo "<pre>";
+//     echo "PDO ERROR:\n";
+//     echo $e->getMessage();
+//     echo "</pre>";
+//     exit;
+// }
+
+$host = "sql100.infinityfree.com"; // KHÔNG localhost
+$user = "if0_40694250";
+$pass = "tfjeocw0xnz";
+$db   = "if0_40694250_book_store_1";
+
+$conn = mysqli_connect($host, $user, $pass, $db);
+
+if (!$conn) {
+    echo "Database connection failed";
     exit;
 }
+
+mysqli_set_charset($conn, "utf8mb4");
+
+
 ?>
 
