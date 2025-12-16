@@ -19,7 +19,10 @@ try {
         ]
     );
 } catch (PDOException $e) {
-    echo "<h3>Database connection error</h3>";
+    echo "<pre>";
+    echo "PDO ERROR:\n";
+    echo $e->getMessage();
+    echo "</pre>";
     exit;
 }
 ?>
