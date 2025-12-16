@@ -3,10 +3,9 @@
 // Database configuration for InfinityFree
 
 define('DB_HOST', 'sql100.infinityfree.com');
-define('DB_NAME', 'if0_40694250_book_store_1');
+define('DB_NAME', 'if0_40694250_bookstore');
 define('DB_USER', 'if0_40694250');
 define('DB_PASS', 'tfjeocw0xnz');
-
 
 try {
     $pdo = new PDO(
